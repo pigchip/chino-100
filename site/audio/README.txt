@@ -1,20 +1,17 @@
-Chino 100 bundled Mandarin speech
+Chino 100 bundled Edge neural Mandarin speech
 
-These are synthetic recordings, not recordings of a human speaker. They were
-generated locally from the application's existing short curriculum phrases
-using the rule-based Mandarin (cmn) voice in eSpeak NG, speed 150. They are a
-portable listening fallback, not a claim of native-speaker pronunciation quality.
-Browser Mandarin voices may sound more natural when installed.
+Voice: Microsoft Edge Read Aloud, zh-CN-XiaoxiaoNeural.
+Client: msedge-tts 2.1.0 (https://www.npmjs.com/package/msedge-tts).
+Generator: scripts/buildAudio.ts.
+Format: MP3 mono, 24000 Hz, 48 kbit/s.
+Each text has an independent normal recording and a slow recording
+synthesized with rate -50%. Neither uses eSpeak or a rule-based voice.
 
-Generator: scripts/buildAudio.ts
-Source: https://github.com/espeak-ng/espeak-ng
-Windows distribution: release 1.51, espeak-ng-X64.msi
-The executable reports 1.52-dev. eSpeak NG is GPL-3.0-or-later.
-This website does not distribute the synthesizer, its binaries, or voice data.
-Synthesized output does not embed the program's source code.
-Encoder: FFmpeg, MP3 mono 22050 Hz, 48 kbit/s.
-Text provenance remains recorded in data/curriculum.json. No textbook
-recordings or voice-cloning datasets were downloaded or copied.
+These are neural synthetic voices, not recordings of a human speaker.
+The text comes from the application's existing short curriculum phrases.
+No textbook recordings or voice-cloning datasets were copied.
+The service and voice remain subject to Microsoft's applicable terms.
 
-Audio generation is a build-time maintenance task only; listening does not
-contact eSpeak, Microsoft, an AI provider, or a runtime application server.
+Edge synthesis runs only during audio generation. Visitors play the compiled
+MP3 files from this website; no application backend or live Edge connection
+is required. A Chinese Web Speech API voice is the playback fallback.
